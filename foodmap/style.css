@@ -28,6 +28,7 @@ div#map
     display: inline-block;
     margin: 0px;
     position: absolute;
+    overflow: hidden;
 }
 div#panel
 {
