@@ -5,8 +5,24 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id="main_container">Hello World</div>
-        test #2
+        <div id="main_container">
+            <div id="map">
+                <iframe id="google_map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d31716.22072739338!2d-84.39853582213235!3d33.789884483864206!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1537196333593" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div id="panel">
+                <div id="main_heading">The Impact of Middle Eastern Refugees on Atlanta's Food Diversity</div>
+                <div id="slider_container">
+                    <input type="range" min="2004" max="2018" value="1" class="slider" class="year" id="year">
+                    <div id="year_display"></div>
+                </div>
+                <canvas id="refugee_chart" width="400" height="400"></canvas>
+            </div>
+        </div>
+        <p>
+            
+        </p>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="Chart.bundle.min.js"></script>
     <script src="script.js"></script>
 </html>
