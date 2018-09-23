@@ -219,9 +219,9 @@ data.forEach(function(d){
     }
     else
     {
-        $('#map_cover').append('<div class="data_point" style="left: '+dx+'%;top: '+dy+'%;" data="'+id+'"></div>');
+        $('#map_cover').append('<img src="flag.png" class="data_point" style="left: '+dx+'%;top: '+dy+'%;" data="'+id+'"/>');
         
-        $('#map_cover').append('<div class="data_comment" style="left: '+(dx+comment_offset_left)+'%;top: '+(dy +comment_offset_top)+'%;" data="'+id+'">'+d["name"]+'</div>');
+        $('#map_cover').append('<div class="data_comment" style="left: '+(dx+comment_offset_left)+'%;top: '+(dy +comment_offset_top)+'%;" data="'+id+'">'+d["name"]+'<br/>'+d["date"]+'</div>');
         
     }
     $('.data_point').hide();
@@ -231,8 +231,8 @@ data.forEach(function(d){
 
 
 
-var initial_size = 12;
-var selected_size = 20;
+var initial_size = 16;
+var selected_size = 24;
 $('.data_point').on("mouseover", function(){
     var identity = ($(this).attr('data'));
     $('#map_cover').find(".data_comment").each(function(){
@@ -246,7 +246,6 @@ $('.data_point').on("mouseover", function(){
         "height":selected_size+"px",
         "left":"-="+initial_size/2+"px",
         "top":"-="+initial_size/2+"px",
-        "border-radius":selected_size+"px",
         "opacity":"1",
     },200);
 });
@@ -263,7 +262,6 @@ $('.data_point').on("mouseleave", function(){
         "height":initial_size+"px",
         "left":"+="+initial_size/2+"px",
         "top":"+="+initial_size/2+"px",
-        "border-radius":initial_size+"px",
         "opacity":"0.6",
     },200);
 });
