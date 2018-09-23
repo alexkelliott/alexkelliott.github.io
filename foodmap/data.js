@@ -180,5 +180,12 @@ data = [
         "lat": 33.80939,
         "lon": -84.24038,
         "special": true
+    },
+    {
+        "name": "Gyro Chef",
+        "date": "10/1/2016",
+        "lat": 34.073140,
+        "lon": -84.295120,
+        "special": true
     }
 ]
