@@ -214,7 +214,7 @@ data.forEach(function(d){
     var year = d["date"].substr(d["date"].length - 4);
     if(d["special"])
     {
-        $('#map_cover').append('<a href="#specialrestaurants" class="data_point specialp" style="left: '+dx+'%;top: '+dy+'%;" data="'+id+'"></a>');
+        $('#map_cover').append('<a onClick="special()" class="data_point specialp" data="'+id+'" style="left: '+dx+'%;top: '+dy+'%;"><img src="gyro.png"/></a>');
         $('#map_cover').append('<div class="data_comment specialc" style="left: '+(dx+comment_offset_left)+'%;top: '+(dy +comment_offset_top)+'%;" data="'+id+'">'+d["name"]+'</div>');
     }
     else
@@ -229,10 +229,14 @@ data.forEach(function(d){
     id += 1;
 });
 
+function special()
+{
+    var spc = document.getElementById("backtotop")
+    spc.scrollIntoView();
+}
 
-
-var initial_size = 16;
-var selected_size = 24;
+var initial_size = 20;
+var selected_size = 28;
 $('.data_point').on("mouseover", function(){
     var identity = ($(this).attr('data'));
     $('#map_cover').find(".data_comment").each(function(){
@@ -262,7 +266,7 @@ $('.data_point').on("mouseleave", function(){
         "height":initial_size+"px",
         "left":"+="+initial_size/2+"px",
         "top":"+="+initial_size/2+"px",
-        "opacity":"0.6",
+        "opacity":"0.7",
     },200);
 });
 update_map();
