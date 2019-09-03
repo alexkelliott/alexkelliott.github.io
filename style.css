@@ -1,0 +1,102 @@
+/*
+Background  #272822
+Foreground  #F8F8F2
+Comment #75715E
+Red #F92672
+Orange  #FD971F
+Light Orange    #E69F66
+Yellow  #E6DB74
+Green   #A6E22E
+Blue    #66D9EF
+Purple  #AE81FF
+*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Consolas;
+
+}
+body {
+    background-color: #272822;
+}
+nav { /* Top nav bar */
+    position: fixed;
+    width: 100%;
+    background-color: #FEFEFE;
+    opacity: 0.95;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: right;
+} nav a {
+    text-decoration: none;
+    color: #515346;
+    margin-right: 10px;
+} nav a:hover {
+    color: black;
+}
+#mainContainer {
+    background-color: #272822;
+    width: 100%;
+    padding-top: 65px;
+}
+
+#placeHolderImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    display: block;
+    margin: 0px auto;
+}
+h1 {
+    color: white;
+    font-size: 2.3em;
+    text-align: center;
+    margin: 10px;
+}
+h2 {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 60px;
+}
+p#description {
+    color: white;
+    font-size: 1em;
+    width: 50%;
+    margin: 5px auto;
+}
+table {
+    color: white;
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    border-spacing: 10px;
+}
+td:nth-child(1) { /* year */
+    color: #F92672;
+    font-size: 1.5em;
+    padding: 10px;
+    border-right: 3px solid #F92672;
+}
+ul {
+    margin-left: 5px;
+}
+li{
+    list-style-type: none;
+    margin-bottom: 10px;
+    color: #E6DB74;
+}
+li a { /* project name */
+    color: #66D9EF;
+    font-size: 1.3em;
+    text-decoration: none;
+    opacity: 0.9;
+}
+li a:hover { /* hover on proj name */
+    opacity: 1;
+}
+li p { /* project description */
+    
+}
