@@ -2,6 +2,11 @@ var allProjects = [
     {
         "year":"2019",
         "projects" : [
+            {
+                "name": "B Extension",
+                "link": "https://github.com/alexkelliott/alexkelliott.github.io/tree/master/BExtension",
+                "description": "Google Chrome extension that turns B's on the page into emoji B's."
+            }
         ]
     },
     {
@@ -11,17 +16,22 @@ var allProjects = [
                 "name": "Food Map of Atlanta",
                 "link": "http://alexkelliott.github.io/foodmap/",
                 "description": "Created for an English project, this project takes data of Middle-Eastern restaurants in Atlanta from Yelp and plots them on an interactive map."
+            },
+            {
+                "name": "Bubble Sort Visualizer",
+                "link": "https://github.com/alexkelliott/alexkelliott.github.io/blob/master/sort/sorter.py",
+                "description": "A bubble sort visualizion tool made using Pygame in Python."
             }
         ]
     },
     {
-        "year":"2017",
-        "projects" : [
-        ]
-    },
-    {
-        "year":"2016",
-        "projects" : [
+        "year": "2016",
+        "projects": [
+            {
+                "name": "Electric Vehicle for Science Olympiad",
+                "link": "http://alexkelliott.github.io/EV",
+                "description": "This was a small electric vehicle that I made for a Science Olympiad tournament. You could select a distance on the car for it to travel and it would have to get as close to that distance as possible. I built it using an Arduino and a custom circuit to select the distance."
+            }
         ]
     },
     {
@@ -44,7 +54,7 @@ var allProjects = [
 document.write("<table>");
 
 allProjects.forEach(function(y) {
-    document.write("<tr><td>" + y["year"] + "</td><td></ul>");
+    document.write("<tr><td>" + y["year"] + "</td><td><ul>");
     y["projects"].forEach(function(project) {
         document.write("<li><a href='" + project["link"] + "'>"
             + project["name"] + "</a><p>" + project["description"]

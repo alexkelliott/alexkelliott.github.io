@@ -72,7 +72,7 @@ table {
     display: block;
     width: 50%;
     margin: 10px auto;
-    border-spacing: 10px;
+    border-spacing: 15px;
 }
 td:nth-child(1) { /* year */
     color: #F92672;
@@ -85,7 +85,7 @@ ul {
 }
 li{
     list-style-type: none;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
     color: #E6DB74;
 }
 li a { /* project name */
@@ -99,4 +99,8 @@ li a:hover { /* hover on proj name */
 }
 li p { /* project description */
     
+}
+
+footer {
+    height: 150px;
 }
