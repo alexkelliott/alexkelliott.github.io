@@ -4,7 +4,7 @@ var allProjects = [
         "projects" : [
             {
                 "name": "Speed Snake",
-                "link": "http://alexkelliott.github.io/SpeedSnake/",
+                "link": "https://github.com/alexkelliott/alexkelliott.github.io/tree/master/SpeedSnake",
                 "description": "Snake game written in C for the Game Boy Advance. This project uses Direct Memory Access (DMA) to draw and update the screen. Arrow keys allow the player to control the snake to both collect apples and power-ups."
             },
             {
