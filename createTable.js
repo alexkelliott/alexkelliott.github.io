@@ -3,6 +3,11 @@ var allProjects = [
         "year":"2019",
         "projects" : [
             {
+                "name": "Speed Snake",
+                "link": "http://alexkelliott.github.io/SpeedSnake/",
+                "description": "Snake game written in C for the Game Boy Advance. This project uses Direct Memory Access (DMA) to draw and update the screen. Arrow keys allow the player to control the snake to both collect apples and power-ups."
+            },
+            {
                 "name": "B Extension",
                 "link": "https://github.com/alexkelliott/alexkelliott.github.io/tree/master/BExtension",
                 "description": "Google Chrome extension that turns B's on the page into emoji B's."
