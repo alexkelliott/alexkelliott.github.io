@@ -64,7 +64,7 @@
 
                 <h2>Soil Moisture</h2>
                 <p>The system periodically monitors the moisture of the soil using a capacitive soil moisture sensor. These are better than resistive moisture sensors because they are not prone to corrosion and leaching harmful substances into the soil. This pariticular soil moisture sensor outputs an anolog signal. It is important to note that although Ardiunos have analog input pins, the Raspberry Pi does not. Because the Raspberry Pi is only able to read in digital inputs, we need to use a ADC (Analog to Digital Converter) to convert the soil moisture sensor's output into a signal the Pi can understand. I am using a MCP3008 10-bit ADC IC. There are two different modes to interface with this IC: Software SPI and Hardware SPI. I won't go into the differences, but I'm using Hardware SPI for this project. Fortunately enough, Adafruit has a free-to-use <a href="https://github.com/adafruit/Adafruit_Python_MCP3008">library</a> to interpet the data from this particular ADC which I am using.</p>
-                <img src="images/Wiring.jpg" width="100%"/>
+                <img src="images/wiring.jpg" width="100%"/>
                 <p>The MCP3008 outputs a 10-bit interpetation of the analog signal which means we will see values between 0 and 1023. Note however that when the sensor is just sitting out of the soil, the output is not exactly 0, and similarly it is not 1023 when sitting in a glass of water. Because of this, we need to calibrate the sensor. I accomplished this by filling two small cups with soil (one perfectly dry, and one completely saturated) and noted the measurements in each. For my particular sensor, my range was 349 to 733. In the code, I simply map this range to a 0 to 100 range.</p>
 
                 <h2>Watering</h2>
@@ -74,7 +74,7 @@
 
                 <h2>Control Page</h2>
                 <p>All aspects of this system are controlled by the control page. Connecting to this page is accomplished through any webbrowser by simply typing the IP address of the Raspberry Pi followed by a colon and the port number. If server is running on 10.0.0.3 for example and port 11000, type 10.0.0.3:11000 into any browser to connect. Typing this in causes the browser to send a GET request to the server which returns the html containing the control page.</p>
-                <img src="images/ControlPage.png" style="width:50%"><img src="images/settings.png" style="width:50%"/>
+                <img src="images/controlpage.png" style="width:50%"><img src="images/settings.png" style="width:50%"/>
                 <p>"Your plant thirsts, quench him" allows the user to manually trigger the pump to water the plant (regardless of the watering mode selected). Similarly, the toggle grow lights function works independly of the lighting mode selected.</p>
 
                 <h2>Data Logging and Visualization</h2>

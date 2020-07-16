@@ -4,7 +4,7 @@ var allProjects = [
         "projects" : [
             {
                 "name": "Reaper Farm",
-                "link": "https://github.com/alexkelliott/ReaperFarm",
+                "link": "/ReaperFarm",
                 "description": "Project to autonomously grow Carolina Reaper pepper plants using a Raspberry Pi. What started as a simple watering and grow light toggling program now uses socket programming to allow devices on the network to monitor and control the plants over a TCP connection while data logging of soil moisture and light levels allows the Pi to send clients real-time data visualizations."
             },
             {

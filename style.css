@@ -15,10 +15,10 @@ Purple  #AE81FF
     padding: 0px;
     margin: 0px;
     font-family: Consolas;
-
 }
 body {
     background-color: #272822;
+    color: white;
 }
 nav { /* Top nav bar */
     position: fixed;
