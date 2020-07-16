@@ -1,11 +1,36 @@
 var allProjects = [
     {
+        "year":"2020",
+        "projects" : [
+            {
+                "name": "Reaper Farm",
+                "link": "https://github.com/alexkelliott/ReaperFarm",
+                "description": "Project to autonomously grow Carolina Reaper pepper plants using a Raspberry Pi. What started as a simple watering and grow light toggling program now uses socket programming to allow devices on the network to monitor and control the plants over a TCP connection while data logging of soil moisture and light levels allows the Pi to send clients real-time data visualizations."
+            },
+            {
+                "name": "Traveling Salesman",
+                "link": "https://github.com/Bwaits2/tsp-project",
+                "description": "An approach to the Traveling Salesman problem using Simulated-Annealing in C. Partner project for CS 3510 Design & Analysis of Algorithms."
+            },
+            {
+                "name": "Analysis of Crime and its Influencing Agents",
+                "link": "https://github.gatech.edu/wanyanwu3/CIAA",
+                "description": "Group project for Emerging Database Technologies leveraging Apache Hadoop and Apache Hive to analyze the influence that weather patterns have on crime rates and crime types by querying a Big Data set."
+            }
+        ]
+    },
+    {
         "year":"2019",
         "projects" : [
             {
                 "name": "Speed Snake",
                 "link": "https://github.com/alexkelliott/alexkelliott.github.io/tree/master/SpeedSnake",
                 "description": "Snake game written in C for the Game Boy Advance. This project uses Direct Memory Access (DMA) to draw and update the screen. Arrow keys allow the player to control the snake to both collect apples and power-ups."
+            },
+            {
+                "name": "Space Pirates",
+                "link": "https://github.gatech.edu/jylty3/SpacePirates",
+                "description": "A space exploration game created with Python Flask for a semester-long group project in Intro to Software Engineering."
             },
             {
                 "name": "B Extension",
