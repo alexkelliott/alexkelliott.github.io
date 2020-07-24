@@ -69,12 +69,12 @@ var allProjects = [
         "projects" : [
             {
                 "name": "Custom Tower Defense",
-                "link": "http://subzerostudios.github.io/TowerDefense/",
+                "link": "",
                 "description": "My first take on a tower defenese game in HTML5. Though some parts are incomplete, the game features a working console that takes user commands and alters the game."
             },
             {
                 "name": "Memesweeper",
-                "link": "http://subzerostudios.github.io/meme/",
+                "link": "",
                 "description": "A highly customizable version of minesweeper with multiple different gamemodes. Numbers are all replaced with memes."
             },
         ]
