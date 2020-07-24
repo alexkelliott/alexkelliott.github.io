@@ -44,7 +44,7 @@ var allProjects = [
         "projects" : [
             {
                 "name": "Food Map of Atlanta",
-                "link": "http://alexkelliott.github.io/foodmap/",
+                "link": "/foodmap",
                 "description": "Created for an English project, this project takes data of Middle-Eastern restaurants in Atlanta from Yelp and plots them on an interactive map."
             },
             {
@@ -69,12 +69,12 @@ var allProjects = [
         "projects" : [
             {
                 "name": "Custom Tower Defense",
-                "link": "",
+                "link": "/TowerDefense",
                 "description": "My first take on a tower defenese game in HTML5. Though some parts are incomplete, the game features a working console that takes user commands and alters the game."
             },
             {
                 "name": "Memesweeper",
-                "link": "",
+                "link": "/meme",
                 "description": "A highly customizable version of minesweeper with multiple different gamemodes. Numbers are all replaced with memes."
             },
         ]
