@@ -1,0 +1,286 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+body
+{
+	position: relative;
+}
+.xyinput
+{
+	width: 80px;
+	font: 15px Courier New;
+	-webkit-appearance: none; 
+  margin: 0;
+}
+#background
+{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	z-index: -1;
+}
+#heading
+{
+	text-align: center;
+	display: block;
+	font: 70px Comic Sans MS;
+	margin: 0px;
+	width: 100%;
+	z-index: 2;
+}
+#keyButton
+{
+	width: 100px;
+	height: 60px;
+	background-color: #ddd;
+	position: absolute;
+	left: 0;
+	top: 0;
+	font: 30px Comic Sans MS;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#key
+{
+	width: 100px;
+	height: 540px;
+	background-color: #ddd;
+	opacity: 0.7;
+	position: absolute;
+	left: 0;
+	top: 60px;
+	padding: none;
+	font: 35px Comic Sans MS;
+	line-height: 50px;
+}
+#changeLogButton
+{
+	width: 300px;
+	height: 60px;
+	background-color: #ddd;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font: 30px Comic Sans MS;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#changeLog
+{
+	width: 300px;
+	height: 400px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: #ddd;
+	opacity: 0.7;
+	position: absolute;
+	right: 0;
+	top: 60px;
+	padding: none;
+}
+#changeLog ul
+{
+	padding: none;
+}
+#changeLog ul li /* each commit */
+{
+	display: block;
+	margin: 5px auto;
+	background-color: #ccc;
+	width: 280px;
+	list-style-type: none;
+	padding: 2px;
+}
+#changeLog ul li ul li
+{
+	width: 100%;
+	font: 17px Courier New;
+}
+#changeLog ul li ul li:first-child
+{
+	list-style-type: none;
+	font: 20px bold Courier New;
+}
+#gameContainer
+{
+	display: block;
+	margin: 0px auto;
+	margin-bottom: 0px;
+	position: relative;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	cursor: default;
+}
+#gameContainer div
+{
+	line-height: 50px;
+	font: 0px Century Gothic; /*35*/
+	overflow: hidden;
+}
+.cover
+{
+	cursor: pointer;
+}
+#gameAndMenu
+{
+	position: relative;
+	margin: 10px auto;
+	width: 900px;
+	height: 500px;
+}
+#menu
+{
+	margin: 0px auto;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow-y: hidden; 
+}
+#menu #resetButton
+{
+	margin-top: -10px;
+	width: 100%;
+	height: 90px;
+	background-color: #ddd;
+	text-align: center;
+	font: 60px Comic Sans MS;
+	cursor: pointer;
+	opacity: 0.8;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+#menu #resetButton:hover
+{
+	opacity: 1;
+}
+#menu img /* neil or cage*/
+{
+	/*position: absolute;
+	top: 100px;*/
+}
+#menu #endMessage
+{
+	position: absolute;
+	top: 100px;
+	width: 100%;
+	text-align: center;
+	font: 45px Comic Sans MS;
+}
+#menu #menuSubCont #backToMainMenu
+{
+	position: absolute;
+	top: 410px;
+	width: 100%;
+	height: 90px;
+	background-color: #ddd;
+	text-align: center;
+	font: 60px Comic Sans MS;
+	cursor: pointer;
+	opacity: 0.8;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+#menu #menuSubCont #backToMainMenu:hover
+{
+	opacity: 1;
+}
+#menu #menuMainCont
+{
+	width: 100%;
+	height: 600px;
+	background-color: #ddd;
+	text-align: center;
+	padding-top: 10px;
+	/* for custom section */
+	font: 40px Comic Sans MS;
+}
+#menu #menuMainCont input
+{
+	height: 40px;
+	width: 100px;
+	font: 20px Comic Sans MS;
+	margin-right: 10px;
+	text-align: center;
+	outline: none;
+	border: 0px;
+}
+
+#menu #menuMainCont button
+{
+	position: absolute;
+	top: 16px;
+	height: 40px;
+	font: 17px Comic Sans MS;
+	line-height: 40px;
+	width: 100px;
+	margin-left: -10px;
+	text-align: center;
+	border: 0px;
+	opacity: 0.8;
+	background-color: #00FF22
+}
+#menu #menuMainCont button:hover
+{
+	opacity: 1;
+}
+#menu #chooseDif
+{
+	font: 50px Comic Sans MS;
+	margin-bottom: 10px;
+}
+#customCont
+{
+	position: relative;
+	margin-top: 20px;
+	margin-left: -100px; /*100=length of absolutely positioned submit button*/
+}
+
+.difs
+{
+	width: 150px;
+	height: 100px;
+	display: block;
+	margin: 10px auto;
+	background-color: #ccc;
+	display: inline-block;
+	font: 30px Comic Sans MS;
+	opacity: 0.7;
+}
+.difs:hover
+{
+	opacity: 1;
+	cursor: pointer;
+}
+.descs
+{
+	width: 150px;
+	display: block;
+	margin: 10px auto;
+	display: inline-block;
+	font: 20px Comic Sans MS;
+}
+#menu #menuSubCont
+{
+	width: 100%;
+	height: 600px;
+	position: relative;
+}

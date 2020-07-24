@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MemeSweeper</title>
+		<meta name="description" content="Minesweeper Just Got Danker.">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="jquery.js"></script> 
+		<script src="mainScript.js"></script>
+	</head>
+
+	<body>
+
+		<div id="background"></div>
+
+		<span id="heading">Memesweeper</span>
+		
+
+		<div id="gameAndMenu">
+			<div id="gameContainer"></div>
+			<div id="menu">
+				<div id="menuMainCont">
+					<div id="chooseDif">Choose A Difficulty</div>
+					<div class="difs" style="background-color:#00D5FF;" onclick="sendData(1)">Beginner</div>
+					<div class="difs" style="background-color:#00FF26;"onclick="sendData(2)">Easy</div>
+					<div class="difs" style="background-color:#FFFB00;"onclick="sendData(3)">Medium</div>
+					<div class="difs" style="background-color:#FF9D00;"onclick="sendData(4)">Hard</div>
+					<div class="difs" style="background-color:#f00;"onclick="sendData(5)">Satan</div>
+
+					<div class="descs">10 x 10 <br/> 10% Bombs</div>
+					<div class="descs">15 x 15 <br/> 15% Bombs</div>
+					<div class="descs">20 x 20 <br/> 25% Bombs</div>
+					<div class="descs">25 x 25 <br/> 30% Bombs</div>
+					<div class="descs">50 x 50 <br/> 40% Bombs</div>
+
+					<br/>
+
+					<input type="checkbox" name="mode" value="Epilepsy" style="width: 30px; margin-left: 15px;"></input> <span style="font:30px Comic Sans Ms; margin-left: -10px;" id="ep">Epilepsy</span>
+
+					<input type="checkbox" name="mode" value="Laundry" style="width: 30px; margin-left: 15px;"></input> <span style="font:30px Comic Sans Ms; margin-left: -10px;" id="la">Laundry</span>
+
+					<input type="checkbox" name="mode" value="Vertigo" style="width: 30px; margin-left: 15px;"></input> <span style="font:30px Comic Sans Ms; margin-left: -10px;" id="la">Vertigo</span>
+
+					<input type="checkbox" name="mode" value="Blind" style="width: 30px; margin-left: 15px;"></input> <span style="font:30px Comic Sans Ms; margin-left: -10px;" id="la">Blind</span>
+
+					<div id="chooseDif" style="margin-bottom: -10px;">Custom Game</div>
+
+					<div id="customCont">
+						X <input id="xcoord" class="xyinput" alt="X" type="number" min=1 autofocus = "autofocus"></input>
+						Y <input id="ycoord" class="xyinput" alt="Y" type="number" min=1></input>
+						Bomb Density <input id="bombcoord" class="xyinput" alt="Bomb Density" type="number" min=1 max=100></input>
+						<button id="submitCoords" onclick="sendData(0)" style="cursor:pointer;">Generate!</button>
+					</div>
+				</div>
+
+				<div id="menuSubCont">
+					<div id="resetButton" onclick="sendData(choice)">Reset</div>
+					<img src="neil.gif" />
+					<div id="endMessage"></div>
+					<div id="backToMainMenu" onclick="returnToMenu()">Main Menu</div>
+				</div> 
+			</div>
+		</div>
+		<div id="changeLogButton">
+		Change Log
+		</div>
+		<div id="changeLog">
+			<ul>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[8/24/16 4:52PM]</li>
+						<li>+Added blind mode</li>
+					</ul>
+				</li>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[8/23/16 4:40PM]</li>
+						<li>+Added vertigo mode</li>
+					</ul>
+				</li>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[8/22/16 6:17PM]</li>
+						<li>+Added ability to play with both epilepsy mode and laundry mode simultaneously</li>
+					</ul>
+				</li>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[10/30/15 5:54PM]</li>
+						<li>+Added Laundry Mode</li>
+					</ul>
+				</li>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[10/29/15 4:34PM]</li>
+						<li>+Added Mode Selector</li>
+						<li>+Added epilepsy mode</li>
+						<li>~changed 'MLG Game' to 'Memesweeper'</li>
+					</ul>
+				</li>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[10/05/15 3:54PM]</li>
+						<li>+Added Drop-Down Key</li>
+					</ul>
+				</li>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[10/04/15 9:17PM]</li>
+						<li>+Added Menu With Preset Difficulties</li>
+						<li>+Added Win/Loss Detection</li>
+						<li>+Added Win/Loss Screen With Restart And Return To Main Menu</li>
+						<li>~Moved Location Of Custom Game Generator</li>
+						<li>~Minor Styling Changes To Get Elements Closer To Top Of Screen</li>
+					</ul>
+				</li>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[10/03/15 4:05PM]</li>
+						<li>+Fixed Flag Mechanics</li>
+						<li>+Added Auto-Scroll To Change Log</li>
+					</ul>
+				</li>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[10/02/15 8:40PM]</li>
+						<li>+Added Auto-Clearing Pepe Blocks</li>
+					</ul>
+				</li>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[10/02/15 4:03PM]</li>
+						<li>+Added Change Log</li>
+						<li>+Added Bomb Density Change Box</li>
+						<li>+Uploaded To Website</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<script>
+			$('#changeLog').hide();
+			$('#changeLogButton').mousedown(function(){
+				$('#changeLog').slideToggle(250);
+			});
+		</script>
+		<div id="keyButton">
+			Key
+		</div>
+		<div id="key">
+			<ul>
+				<li>
+					<img src="pepe.gif"/> 0
+				</li>
+				<li>
+					<img src="frog.gif"/> 1
+				</li>
+				<li>
+					<img src="spook.gif"/> 2
+				</li>
+				<li>
+					<img src="snoop.gif"/> 3
+				</li>
+				<li>
+					<img src="kiddance.gif"/> 4
+				</li>
+				<li>
+					<img src="doge.gif"/> 5
+				</li>
+				<li>
+					<img src="sanic.gif"/> 6
+				</li>
+				<li>
+					<img src="yourmemes.gif"/> 7
+				</li>
+				<li>
+					<img src="blacknod.gif"/> 8
+				</li>
+			</ul>
+		</div>
+		<script>
+			$('#key').hide();
+			$('#keyButton').mousedown(function(){
+				$('#key').slideToggle(250);
+			});
+		</script>
+	</body>
+</html>
