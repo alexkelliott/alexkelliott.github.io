@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+    	* {
+    		margin: 0px;
+    		padding: 0px;
+    		color: white;
+    	}
+    	body {
+    		background-color: #111;
+    	}
+    	#finalPanel {
+    		display: none;
+    	}
+    	input#color {
+    		display: block;
+    		color: black;
+    	}
+    	input#toggle {
+    		color: black;
+    	}
+    </style>
+  </head>
+  <body>
+  	<div id="inputPanel">
+  		<h1>Select an Image:</h1>
+  		<input id="myinput" type="file" onchange="encode();updateImage();" />
+  	</div>
+  	<div id="finalPanel">	
+  		<canvas id="canvas"></canvas>
+  		<input id="color" type="number" name="color" min="0" max="255" value="0" onchange="updateImage();">
+  		<input id="toggle" type="button" value="Toggle Context" onclick="changeContext()">
+  	</div>
+
+  	<script type="text/javascript">
+  		var base64;
+  		var context = 1; //0: no background, 1: show background
+
+  		function changeContext() {
+  			context = !context;
+  			updateImage()
+  		}
+
+  		function encode() {
+	        var selectedfile = document.getElementById("myinput").files;
+
+	        if (selectedfile.length > 0) {
+
+				var imageFile = selectedfile[0];
+				var fileReader = new FileReader();
+
+				fileReader.onload = function(fileLoadedEvent) {
+					var srcData = fileLoadedEvent.target.result;
+					base64 = srcData;
+					switchView();
+					updateImage();
+				}
+
+				fileReader.readAsDataURL(imageFile);
+	        }
+	    }
+
+	    function updateImage() {
+	  		const canvas = document.getElementById("canvas");
+	  		const ctx = canvas.getContext("2d");
+
+	  		const image = new Image();
+	  		image.src = base64;
+
+	  		canvas.width = image.naturalWidth;
+	  		canvas.height = image.naturalHeight;
+
+	  		let color = parseInt(document.getElementById("color").value);
+
+	  		image.addEventListener('load', function() {
+	  			ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+	  			const scannedImage = ctx.getImageData(0, 0, canvas.width, canvas.height);
+	  			const scannedData = scannedImage.data;
+
+	  			for (let i = 0; i < scannedData.length; i += 4) {
+	  				if (scannedData[i] == color) {
+		  				scannedData[i] = 255;
+		  				scannedData[i+1] = 0;
+		  				scannedData[i+2] = 0;
+	  				} else if (!context) {
+	  					scannedData[i] = 0;
+		  				scannedData[i+1] = 0;
+		  				scannedData[i+2] = 0;
+	  				}
+	  			}
+
+	  			scannedImage.data = scannedData;
+	  			ctx.putImageData(scannedImage, 0, 0);
+	  		})
+	    }
+
+	    function switchView() {
+	    	document.getElementById("inputPanel").style.display = "none";
+	    	document.getElementById("finalPanel").style.display = "block";
+	    }
+  	</script>
+  </body>
+</html>
