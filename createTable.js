@@ -4,8 +4,8 @@ var allProjects = [
         "projects": [
             {
                 "name" : "GA Smart Communities",
-                "link" : "",
-                "description" : ""
+                "link" : "https://smartcities.gatech.edu/georgia-smart",
+                "description" : "Currently implementing methods to extend last-mile connectivity to four under-served GA communities as part of the GA Smart Communities initiative."
             }
         ]
     },
@@ -15,7 +15,12 @@ var allProjects = [
             {
                 "name": "LoRaX: Repurposing LoRa as a Low Data Rate Messaging System to Extend Internet Boundaries",
                 "link": "",
-                "description": ". Paper submitted to ACM COMPASS 2022 - Computing and Sustainable Societies."
+                "description": "This project proposes a novel approach to extend connectivity in rural areas using LoRa - an Internet of Things protocol. Constructed a testbed to demonstrate the feasibility of the approach and collect experimental results. Work was in collaboration with NAU's CANIS lab. Paper submitted to ACM COMPASS 2022 - Computing and Sustainable Societies."
+            },
+            {
+                "name": "Quinault Indian Language App",
+                "link": "https://github.com/ChidoOOfficial/JIC-0345-TheResistance",
+                "description": "The Quinault tribe is a Native American group based in Northwest Washington facing extinction of their language; while some tribal elders can speak some, no one is fluent anymore. This group project is a mobile language learning application that aims to teach young members of the tribe words and phrases in Quinault in a gamified manner."
             }
         ]
     },
