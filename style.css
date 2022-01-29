@@ -48,8 +48,7 @@ nav { /* Top nav bar */
 }
 @media only screen and (hover: none) and (pointer: coarse){
     #mainContainer {
-        width: 100%;
-        background-color: red;
+        width: 90%;
     }
 }
 
