@@ -46,6 +46,11 @@ nav { /* Top nav bar */
     display: block;
     margin: 0 auto;
 }
+@media only screen and (hover: none) and (pointer: coarse){
+    #mainContainer {
+        width: 100%;
+    }
+}
 
 #placeHolderImage {
     width: 200px;
