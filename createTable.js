@@ -1,5 +1,25 @@
 var allProjects = [
     {
+        "year":"2022",
+        "projects": [
+            {
+                "name" : "GA Smart Communities",
+                "link" : "",
+                "description" : ""
+            }
+        ]
+    },
+    {
+        "year":"2021",
+        "projects" : [
+            {
+                "name": "LoRaX: Repurposing LoRa as a Low Data Rate Messaging System to Extend Internet Boundaries",
+                "link": "",
+                "description": ". Paper submitted to ACM COMPASS 2022 - Computing and Sustainable Societies."
+            }
+        ]
+    },
+    {
         "year":"2020",
         "projects" : [
             {

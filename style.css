@@ -76,6 +76,12 @@ p#description {
     font-size: 1em;
     margin-top: 5px;
 }
+#socials {
+    text-align: center;
+}
+#socials a {
+    margin: 10px;
+}
 table {
     color: white;
     display: block;
