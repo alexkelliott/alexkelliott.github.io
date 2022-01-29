@@ -80,6 +80,7 @@ p#description {
     color: white;
     font-size: 1em;
     margin-top: 5px;
+    text-align: justify;
 }
 #socials {
     text-align: center;
