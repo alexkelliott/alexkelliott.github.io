@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ookla datasets</title>
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+            form {
+                position: fixed;
+                top:0;
+                border: 1px solid grey;
+                margin: 15px;
+                padding: 10px;
+            }
+            img#map {
+                height: 100vh;
+            }
+        </style>
+    </head>
+
+    <body>
+        <img id="map" src="" alt="">
+        <form name="options">
+            <input type="radio" id="Fixed" name="fixed_mobile" checked="true" onclick="update()">
+            <label for="Fixed">Fixed</label><br>
+            <input type="radio" id="Mobile" name="fixed_mobile" onclick="update()">
+            <label for="Mobile">Mobile</label><br>
+            <br>  
+            <input type="radio" id="Logarithmic" name="linear_or_log" checked="true" onclick="update()">
+            <label for="Logarithmic">Logarithmic</label><br> 
+            <input type="radio" id="Linear" name="linear_or_log" onclick="update()">
+            <label for="Linear">Linear</label><br>
+            
+            <br>
+            <a id="link" href="" target="_blank">Open in new tab</a>
+        </form>
+
+        <script>
+            function update() {
+                var fixed = document.getElementById("Fixed").checked;
+                var linear = document.getElementById("Linear").checked;
+                filename = "2022Q4_" + (fixed ? "fixed" : "mobile") + "_LogResults=" + (linear ? "False" : "True") + ".svg";
+                document.getElementById("map").src = filename;
+                document.getElementById("link").href = filename;
+            }
+            update();
+        </script>
+    </body>
+
+</html>
