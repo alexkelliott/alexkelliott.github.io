@@ -1,11 +1,21 @@
 var allProjects = [
     {
+        "year":"2023",
+        "projects": [
+            {
+                "name" : "Smart Sea-Level Sensors",
+                "link" : "",
+                "description" : "Currently working on project to retrofit sea-level sensors in around Sapello Island in coastal Georgia to communicate with SWARM satelites."
+            }
+        ]
+    },
+    {
         "year":"2022",
         "projects": [
             {
                 "name" : "GA Smart Communities",
                 "link" : "https://smartcities.gatech.edu/georgia-smart",
-                "description" : "Currently implementing methods to extend last-mile connectivity to four under-served GA communities as part of the GA Smart Communities initiative."
+                "description" : "Studied methods to extend last-mile connectivity to four under-served GA communities as part of the GA Smart Communities initiative."
             }
         ]
     },
@@ -14,7 +24,7 @@ var allProjects = [
         "projects" : [
             {
                 "name": "LoRaX: Repurposing LoRa as a Low Data Rate Messaging System to Extend Internet Boundaries",
-                "link": "",
+                "link": "https://ebelding.cs.ucsb.edu/sites/default/files/publications/lorax_for_compass_2022.pdf",
                 "description": "This project proposes a novel approach to extend connectivity in rural areas using LoRa - an Internet of Things protocol. Constructed a testbed to demonstrate the feasibility of the approach and collect experimental results. Work was in collaboration with NAU's CANIS lab. Paper submitted to ACM COMPASS 2022 - Computing and Sustainable Societies."
             },
             {

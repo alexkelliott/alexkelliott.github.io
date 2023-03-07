@@ -110,12 +110,15 @@ li{
 }
 a { /* project name */
     color: #66D9EF;
-    font-size: 1.3em;
     text-decoration: none;
     opacity: 0.9;
 }
 a:hover { /* hover on proj name */
     opacity: 1;
+}
+li a {
+    font-size: 1.3em;
+
 }
 li p { /* project description */
     
