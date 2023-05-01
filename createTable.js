@@ -6,6 +6,11 @@ var allProjects = [
                 "name" : "Smart Sea-Level Sensors",
                 "link" : "",
                 "description" : "Currently working on project to retrofit sea-level sensors in around Sapello Island in coastal Georgia to communicate with SWARM satelites."
+            },
+            {
+                "name" : "The Sad Story of DNSSEC",
+                "link" : "dnssec/TheSadStoryOfDNSSEC.pdf",
+                "description" : "Paper for Georgia Tech's CS 8803 - Securing the Internet Infrastructure exploring the real-world deployment of Domain Name System Security Extensions (DNSSEC)"
             }
         ]
     },

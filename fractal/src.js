@@ -6,7 +6,6 @@ var ctx = c.getContext("2d");
 var width = c.width;
 var height = c.height;
 
-
 var spread = 40; // higher = greater angle between branches
 var stem_length = 250;
 var length_shrink = 0.5;
@@ -19,22 +18,17 @@ function draw_vector(start_x, start_y, angle, magnitude) {
 	ctx.lineTo(end_x, end_y);
 	ctx.stroke();
 
-	return {"new_x": end_x, "new_y": end_y}
+	return {"new_x": end_x, "new_y": end_y};
 }
 
-
-/*
- *  Recursive function to draw branches
- *  with decresasing length.
- */
 function draw_branch(start_x, start_y, angle, magnitude) {
 	if (magnitude < 10)
 		return;
 
 	var v = draw_vector(start_x, start_y, angle, magnitude);
 
-	draw_branch(v.new_x, v.new_y, angle-(0.0001 * spread * magnitude), magnitude*0.01*length_shrink)
-	draw_branch(v.new_x, v.new_y, angle+(0.0001 * spread * magnitude), magnitude*0.01*length_shrink)
+	draw_branch(v.new_x, v.new_y, angle-(0.0001 * spread * magnitude), magnitude*0.01*length_shrink);
+	draw_branch(v.new_x, v.new_y, angle+(0.0001 * spread * magnitude), magnitude*0.01*length_shrink);
 }
 
 function start() {
@@ -47,3 +41,11 @@ function start() {
 }
 
 start();
+
+
+
+
+/*
+ *  Recursive function to draw branches
+ *  with decresasing length.
+ */
