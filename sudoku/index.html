@@ -12,16 +12,15 @@
 <body>
 	<h1 id="difficulty"></h1>
 	<div id="main_container">
-	<canvas id="board">
-	</canvas>
-	<br/>
-	<input type="checkbox" name="all_candidates" id="all_candidates" onclick="update_mode()"/>
-	<label id="all_candidates_label">Show All Candidates</label>
+		<canvas id="board">
+		</canvas>
+		<br/>
+		<input type="checkbox" name="all_candidates" id="all_candidates" onclick="update_mode()"/>
+		<label id="all_candidates_label">Show All Candidates</label>
+		<br><br>
+		<input type="button" name="recalculate" onclick="handle_update_all_candidates()">
+		<label id="recalculate">Recalculate All Candidates</label>
 	</div>
-	<br>
-	<input type="button" name="recalculate" onclick="handle_update_all_candidates()">
-
-	<label id="recalculate">Recalculate All Candidates</label>
 
 </body>
 <script type="text/javascript" src="script.js"></script>
