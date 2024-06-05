@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Fractal Tree</title>
+		<style>
+			p {
+				display: inline-block;
+				font-family: Arial, Helvetica, sans-serif;
+				margin-right: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="range" id="angle" min="1" max="100" value="40" onmouseup="start()"/>
+		<p>Angle</p>
+
+		<input type="range" id="stem_length" min="1" max="500" value="250" onmouseup="start()"/>
+		<p>Stem Length</p>
+		
+		<input type="range" id="length_shrink" min="1" max="100" value="50" onmouseup="start()"/>
+		<p>Length Shrink</p>
+		<br/>
+
+		<canvas id="myCanvas"></canvas> 
+		<script src="src.js"></script>
+	</body>
+</html>

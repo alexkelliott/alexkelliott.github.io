@@ -15,10 +15,10 @@ Purple  #AE81FF
     padding: 0px;
     margin: 0px;
     font-family: Consolas;
-
 }
 body {
     background-color: #272822;
+    color: white;
 }
 nav { /* Top nav bar */
     position: fixed;
@@ -46,6 +46,11 @@ nav { /* Top nav bar */
     display: block;
     margin: 0 auto;
 }
+@media only screen and (hover: none) and (pointer: coarse){
+    #mainContainer {
+        width: 90%;
+    }
+}
 
 #placeHolderImage {
     width: 200px;
@@ -66,10 +71,22 @@ h2 {
     text-align: center;
     margin-top: 60px;
 }
+span {
+    text-align: center;
+    width: 100%;
+    display: block;
+}
 p#description {
     color: white;
     font-size: 1em;
     margin-top: 5px;
+    text-align: justify;
+}
+#socials {
+    text-align: center;
+}
+#socials a {
+    margin: 10px;
 }
 table {
     color: white;
@@ -91,14 +108,17 @@ li{
     margin-bottom: 13px;
     color: #E6DB74;
 }
-li a { /* project name */
+a { /* project name */
     color: #66D9EF;
-    font-size: 1.3em;
     text-decoration: none;
     opacity: 0.9;
 }
-li a:hover { /* hover on proj name */
+a:hover { /* hover on proj name */
     opacity: 1;
+}
+li a {
+    font-size: 1.3em;
+
 }
 li p { /* project description */
     
