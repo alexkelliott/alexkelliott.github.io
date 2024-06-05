@@ -1,0 +1,27 @@
+* {
+	padding: 0;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	color: white;
+}
+body {
+	background-color: #333;
+}
+h1#difficulty {
+
+}
+div#main_container {
+	display: block;
+	margin: 0 auto;
+}
+canvas#board {
+	margin: 40px;
+}
+input {
+	width: 30px;
+    height: 30px;
+}
+label {
+	font-size: 30px;
+	margin-left: 10px;
+}
